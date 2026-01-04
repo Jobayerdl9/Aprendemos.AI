@@ -1,0 +1,26 @@
+Test Case ID,Test Case Name,Preconditions,Test Steps,Expected Result
+TC-01,Upload valid PDF,User is on Study Planner,Upload a readable PDF file,PDF uploads successfully and text is extracted
+TC-02,Upload scanned PDF,Study Planner opened,Upload image-based PDF,OCR attempted or clear error shown
+TC-03,Upload corrupted PDF,Study Planner opened,Upload corrupted/protected PDF,Validation error displayed
+TC-04,Upload large PDF,Study Planner opened,Upload PDF exceeding size limit,File size error shown
+TC-05,Text input upload,Study Planner opened,Enter valid study text,Text accepted and analyzed
+TC-06,Empty text input,Study Planner opened,Submit empty text,Validation error shown
+TC-07,Valid website link,Study Planner opened,Enter valid website URL,Content extracted successfully
+TC-08,Restricted website link,Study Planner opened,Enter login-required/blocked URL,Extraction failure message
+TC-09,Invalid website URL,Study Planner opened,Enter malformed URL,Validation error shown
+TC-10,Entire document selection,Content uploaded,Select “Entire document”,All content included
+TC-11,Certain pages valid range,Content uploaded,"Enter 1-10, 15",Correct pages selected
+TC-12,Invalid page range,Content uploaded,Enter 10-5 or abc,Validation error shown
+TC-13,Pages exceed document length,Content uploaded,Enter non-existing pages,Warning or ignored pages
+TC-14,Certain topics valid,Content uploaded,Enter matching topics,Topics mapped correctly
+TC-15,Topics not found,Content uploaded,Enter unrelated topics,“Topics not found” message
+TC-16,Valid study days,Planner form opened,Enter positive days,Accepted
+TC-17,Invalid study days,Planner form opened,Enter 0 or negative value,Validation error shown
+TC-18,Valid study hours,Planner form opened,Enter valid hours/day,Accepted
+TC-19,Excessive study hours,Planner form opened,Enter 20+ hours,Warning displayed
+TC-20,Empty days/hours,Planner form opened,Leave fields empty,Required field error
+TC-21,Generate study plan,All inputs valid,Click Generate Plan,Study plan generated
+TC-22,Minimal content plan,Small content uploaded,Generate long-term plan,Plan adjusted logically
+TC-23,AI processing failure,System error occurs,Generate plan,Friendly error + retry
+TC-24,Modify inputs,Plan already generated,Change days/hours,Plan updates correctly
+TC-25,Cross-browser test,Multiple browsers,Test module,Consistent behavior
